@@ -1,0 +1,289 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "SimSun", sans-serif;
+    background: #f5f0e6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid #8b4513;
+}
+
+h1 {
+    color: #8b4513;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #8b6914;
+    font-size: 1.2rem;
+}
+
+h2 {
+    color: #8b4513;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+h3,
+h4 {
+    color: #8b4513;
+}
+
+/* 产品选择区域 */
+.product-selection {
+    margin-bottom: 40px;
+}
+
+.product-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product-btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.product-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.product-btn.active {
+    background: #8b4513;
+    color: white;
+    border-color: #8b4513;
+}
+
+/* 占卜区域 */
+.divination-area {
+    margin-bottom: 40px;
+}
+
+.bagua-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.bagua-wheel {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bagua-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 3s ease-out;
+    display: block;
+}
+
+.spinning {
+    animation: spin 3s ease-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1080deg);
+    }
+}
+
+#divination-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#divination-btn:hover {
+    background: #a05c2b;
+    transform: translateY(-2px);
+}
+
+/* 结果区域 */
+.result-area {
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.result-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hexagram-display {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.hexagram-title {
+    margin-bottom: 15px;
+}
+
+#hexagram-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b4513;
+    margin-right: 10px;
+}
+
+#hexagram-number {
+    font-size: 1.2rem;
+    color: #8b6914;
+}
+
+.hexagram-symbol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hexagram-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(255, 250, 240, 0.5);
+}
+
+.hexagram-block-title {
+    font-weight: bold;
+    color: #8b4513;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+    width: 100%;
+    text-align: center;
+}
+
+.hexagram-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.yang-line {
+    width: 70px;
+    height: 12px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+.yin-line {
+    width: 30px;
+    height: 12px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+/* 动爻样式 */
+.yang-line.changing,
+.yin-line.changing {
+    background-color: #d9534f;
+}
+
+.change-mark {
+    color: #d9534f;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.position-mark {
+    position: absolute;
+    right: -20px;
+    font-size: 0.8rem;
+    color: #8b4513;
+}
+
+.prediction-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.prediction-aspects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.aspect {
+    background: rgba(139, 69, 19, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.aspect h4 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 0.9rem;
+}
