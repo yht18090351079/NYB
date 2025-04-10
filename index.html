@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>农产品供销预测系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>农产品供销预测系统</h1>
+            <p class="subtitle">结合阴阳八卦周易五行的智慧</p>
+        </header>
+
+        <main>
+            <section class="product-selection">
+                <h2>选择农产品类别</h2>
+                <div class="product-categories">
+                    <button class="product-btn" data-element="金">谷物类（金）</button>
+                    <button class="product-btn" data-element="木">果蔬类（木）</button>
+                    <button class="product-btn" data-element="水">水产类（水）</button>
+                    <button class="product-btn" data-element="火">畜牧类（火）</button>
+                    <button class="product-btn" data-element="土">根茎类（土）</button>
+                </div>
+            </section>
+
+            <section class="divination-area">
+                <h2>卦象占卜</h2>
+                <div class="bagua-container">
+                    <div class="bagua-wheel">
+                        <img src="http://p1.itc.cn/images01/20230709/95a2cd9c1e34434487211c2fa633bade.jpeg" alt="八卦图"
+                            class="bagua-img">
+                    </div>
+                    <button id="divination-btn">开始占卜</button>
+                </div>
+            </section>
+
+            <section class="result-area hidden" id="result-section">
+                <h2>预测结果</h2>
+                <div class="result-container">
+                    <div class="hexagram-display">
+                        <div class="hexagram-title">
+                            <span id="hexagram-name">请先占卜</span>
+                            <span id="hexagram-number"></span>
+                        </div>
+                        <div class="hexagram-symbol" id="hexagram-symbol">
+                            <!-- 卦象将由JS生成 -->
+                        </div>
+                    </div>
+                    <div class="prediction-text">
+                        <h3>农产品供销预测</h3>
+                        <div class="prediction-aspects">
+                            <div class="aspect">
+                                <h4>市场趋势</h4>
+                                <p id="market-trend"></p>
+                            </div>
+                            <div class="aspect">
+                                <h4>价格走向</h4>
+                                <p id="price-prediction"></p>
+                            </div>
+                            <div class="aspect">
+                                <h4>供需关系</h4>
+                                <p id="supply-demand"></p>
+                            </div>
+                            <div class="aspect">
+                                <h4>宜忌建议</h4>
+                                <p id="recommendations"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>本系统仅供参考，实际农产品市场受多种因素影响</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
